@@ -38,7 +38,9 @@ a {
     color: #fff;
     font-size: 40px;
     font-weight: 600;
-    padding-top: 8vh;
+    // padding-top: 8vh;
+    box-sizing: border-box;
+    padding: 8vh 0 25px 25px;
     margin: 0 auto;
   }
 }
