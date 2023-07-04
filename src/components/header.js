@@ -9,13 +9,8 @@ function Header() {
 
   return (
     <div id='header'>
-      <div className='container'>
-        <h1 className='logo'>{window.Config.SiteName}</h1>
-        <div className='navi'>
-          {window.Config.Navi.map((item, index) => (
-            <Link key={index} to={item.url} text={item.text} />
-          ))}
-        </div>
+      <div className='title'>
+      <h1>Status</h1>
       </div>
     </div>
   );

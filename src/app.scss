@@ -1,4 +1,4 @@
-$primary-color: #3bd672;
+$primary-color: #55D79F;
 
 * {
   margin: 0;
@@ -27,38 +27,28 @@ a {
 }
 
 #header {
-  background-color: #121a26;
   padding: 30px 0 60px 0;
-  color: $primary-color;
+  // color: $primary-color;
+  // background: linear-gradient(150deg,#7795f8 15%,#6772e5 70%,#555abf 94%);
+  background: linear-gradient(150deg,#FCA2BB 15%,#FB82A4 70%,#F9648D 94%);
   width: 100%;
-  .container {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-  }
-  .logo {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .navi {
-    font-size: 14px;
-    color: #ffffff;
-    a {
-      margin-left: 20px;
-      transition: color ease 150ms;
-    }
-    a:hover {
-      color: $primary-color;
-    }
+  height: 50vh;
+  .title {
+    max-width: 940px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    padding-top: 8vh;
+    margin: 0 auto;
   }
 }
 
 #uptime {
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  margin-top: -30px;
-  margin-bottom: 40px;
+  margin-top: calc(-50vh + 250px);;
+  // margin-bottom: 40px;
   padding: 15px 0;
   overflow: hidden;
   .site {
@@ -121,9 +111,10 @@ a {
       i {
         flex-grow: 1;
         margin: 0 1px;
-        height: 25px;
-        border-radius: 5px;
+        height: 30px;
+        border-radius: 2px;
         transition: opacity ease 150ms;
+        cursor: pointer;
         &.ok {
           background-color: $primary-color;
         }
@@ -152,8 +143,9 @@ a {
       color: #9aa2af;
     }
     .tooltip {
-      padding: 6px 9px !important;
+      padding: 12px 15px !important;
       border-radius: 5px !important;
+      transition: all .4s;
     }
   }
   .site:last-child {
@@ -162,12 +154,65 @@ a {
 }
 
 #footer {
-  font-size: 12px;
   text-align: center;
-  line-height: 25px;
-  color: #969ea8;
-  a {
-    font-weight: bold;
-    color: $primary-color;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #8898aa;
+  p {
+    padding: 20px;
+    a {
+      font-weight: bold;
+      color: #fa7298;
+    }
   }
+}
+
+
+.githubicon {
+  .github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+  
+  @keyframes octocat-wave {
+    0%, 100% {
+      transform: rotate(0);
+    }
+    20%, 60% {
+      transform: rotate(-25deg);
+    }
+    40%, 80% {
+      transform: rotate(10deg);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+      animation: none;
+    }
+    .github-corner .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
+  }
+}
+
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 8px;
+  padding: 0 5px;
+  background-color: #F4F5F7;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(160,163,171,.5) !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  opacity: 0.1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(250,114,152,.5) !important;
+
 }

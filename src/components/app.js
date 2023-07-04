@@ -1,8 +1,7 @@
 import { useMemo } from 'react';
-import Link from './link';
 import Header from './header';
 import UptimeRobot from './uptimerobot';
-import Package from '../../package.json';
+import GithubIcon from './githubicon'
 
 function App() {
 
@@ -15,6 +14,7 @@ function App() {
 
   return (
     <>
+      <GithubIcon />
       <Header />
       <div className='container'>
         <div id='uptime'>
@@ -23,8 +23,8 @@ function App() {
           ))}
         </div>
         <div id='footer'>
-          <p>基于 <Link to='https://uptimerobot.com/' text='UptimeRobot' /> 接口制作，检测频率 5 分钟</p>
-          <p>&copy; 2020 <Link to='https://status.org.cn/' text='STATUS.ORG.CN' />, Version {Package.version}</p>
+          <p>Powered By <a href='https://uptimerobot.com/' target='_blank'>Uptime Robot</a> & <a href='https://github.com/yb/uptime-status/' target='_blank'>Uptime Status</a> & <a href='https://solstice23.top/' target='_blank'>solstice23</a> & <a href='https://www.alongw.cn/' target='_blank'>alongw</a></p>
+          
         </div>
       </div>
     </>
